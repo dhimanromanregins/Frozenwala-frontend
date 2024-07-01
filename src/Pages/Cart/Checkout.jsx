@@ -130,7 +130,7 @@ const CheckoutPage = () => {
         pick_up: 0,
       };
 
-      const response = await Api.post("create_order/", bodyData);
+      const response = await Api.post("api/create_order/", bodyData);
 
       if (response.data.status === "success") {
         const options = {
@@ -191,7 +191,7 @@ const CheckoutPage = () => {
         walet_value: walletValue,
       };
       console.log(bodyData);
-      const response = await Api.post(`create_order/`, bodyData);
+      const response = await Api.post(`api/create_order/`, bodyData);
       console.log(response.data);
         if (response.data.status === 'success') {
           const options = {
