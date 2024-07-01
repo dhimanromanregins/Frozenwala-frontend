@@ -16,7 +16,7 @@ const MyProfile = () => {
   const uid = localStorage.getItem("user_id");
 
     try {
-      const response = await Api.get(`profile/?user_id=${uid}`);
+      const response = await Api.get(`api/profile/?user_id=${uid}`);
       console.log("get", response.data.profile_photo);
       setPhoto(response.data.profile_photo);
       setEmail(response.data.email);
@@ -44,7 +44,7 @@ const MyProfile = () => {
       if (profileImage) {
         formData.append("profile_image", profileImage);
       }
-      const response = await Api.postFormdata(`profile/`, formData);
+      const response = await Api.postFormdata(`api/profile/`, formData);
       console.log("Profile updated:", response.data);
     } catch (error) {
       console.log("Error updating profile:", error.response.data);
