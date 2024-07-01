@@ -47,7 +47,7 @@ const CheckoutPage = () => {
 
   const getTotalPrice = async () => {
     try {
-      const response = await Api.get(`get_total_price/?user_id=${uid}`);
+      const response = await Api.get(`api/get_total_price/?user_id=${uid}`);
       setTotalPrice(response.data.total_price);
       setDeliveryCharge(response.data.delivery_charge);
       setDiscount(response.data.discounted_price);
@@ -237,7 +237,7 @@ const CheckoutPage = () => {
 
   const getWalletBalance = async () => {
     try {
-      const response = await Api.get(`wallet/?user_id=${uid}`);
+      const response = await Api.get(`api/wallet/?user_id=${uid}`);
       setWalletBalance(response.data.wallet_value);
     } catch (error) {
       console.log("Error fetching wallet balance:", error);
