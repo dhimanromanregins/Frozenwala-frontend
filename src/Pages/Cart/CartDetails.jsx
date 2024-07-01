@@ -37,7 +37,7 @@ function CartDetails() {
 
   const getTotalPrice = async () => {
     try {
-      const response = await Api.get(`get_total_price/?user_id=${uid}`);
+      const response = await Api.get(`api/get_total_price/?user_id=${uid}`);
       setTotalPrice(response.data.total_price);
       setDeliveryCharge(response.data.delivery_charge);
       setDiscount(response.data.discounted_price);
