@@ -193,7 +193,7 @@ function Popular({ refreshCart }) {
                             <div className="card card-span h-100 rounded-3">
                               <img
                                 className="img-fluid rounded-3 h-100"
-                                src={`http://65.1.92.185/${item.item_photo}`}
+                                src={`http://app.frozenwala.com/${item.item_photo}`}
                                 alt={item.title}
                               />
                               <div className="card-body ps-0">
